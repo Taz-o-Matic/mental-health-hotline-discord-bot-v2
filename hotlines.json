@@ -1,0 +1,63 @@
+{
+  "countries": {
+    "United States": {
+      "national": [{"name": "988 Suicide & Crisis Lifeline", "number": "988", "notes": "24/7 Call/Text/Chat"}],
+      "states": {
+        "California": [{"name": "California Warmline", "number": "855-845-7415", "notes": "24/7"}],
+        "New York": [{"name": "NYC Well", "number": "888-692-9355", "notes": "24/7"}],
+        "Texas": [{"name": "Texas Suicide Prevention", "number": "833-929-5433", "notes": "24/7"}],
+        "Florida": [{"name": "Florida Crisis Line", "number": "1-800-273-8255", "notes": "24/7"}],
+        "Illinois": [{"name": "Illinois Warmline", "number": "866-359-2273", "notes": "24/7"}],
+        "Pennsylvania": [{"name": "Pennsylvania Warmline", "number": "1-855-284-2494", "notes": "24/7"}],
+        "Ohio": [{"name": "Ohio Suicide Prevention", "number": "1-800-273-8255", "notes": "24/7"}],
+        "Michigan": [{"name": "Michigan Warmline", "number": "1-888-568-1112", "notes": "24/7"}],
+        "Georgia": [{"name": "Georgia Crisis Line", "number": "1-800-715-4225", "notes": "24/7"}],
+        "North Carolina": [{"name": "North Carolina Crisis Line", "number": "1-800-273-8255", "notes": "24/7"}]
+      }
+    },
+    "Canada": {
+      "national": [{"name": "Talk Suicide Canada", "number": "1-833-456-4566", "notes": "24/7"}],
+      "provinces": {
+        "Ontario": [{"name": "Ontario Mental Health Helpline", "number": "1-866-531-2600", "notes": "24/7"}],
+        "Quebec": [{"name": "Tel-Aide Québec", "number": "1-800-567-9696", "notes": "24/7"}],
+        "British Columbia": [{"name": "BC Suicide Line", "number": "1-800-784-2433", "notes": "24/7"}],
+        "Alberta": [{"name": "Alberta Mental Health Help Line", "number": "1-877-303-2642", "notes": "24/7"}],
+        "Manitoba": [{"name": "Manitoba Suicide Line", "number": "1-877-435-7170", "notes": "24/7"}],
+        "Nova Scotia": [{"name": "Nova Scotia Mental Health", "number": "1-888-429-8167", "notes": "24/7"}]
+      }
+    },
+    "United Kingdom": {"national": [{"name": "Samaritans", "number": "116 123", "notes": "24/7"}]},
+    "Australia": {"national": [{"name": "Lifeline", "number": "13 11 14", "notes": "24/7"}]},
+    "France": {"national": [{"name": "SOS Suicide", "number": "01 45 39 40 00", "notes": "24/7"}]},
+    "Germany": {"national": [{"name": "Telefonseelsorge", "number": "0800 111 0 111", "notes": "24/7"}]},
+    "Belgium": {"national": [{"name": "Centre de Prévention du Suicide", "number": "0800 32 123", "notes": "24/7"}]},
+    "Spain": {"national": [{"name": "Teléfono de la Esperanza", "number": "717 003 717", "notes": "24/7"}]},
+    "Italy": {"national": [{"name": "Telefono Amico", "number": "02 2327 2327", "notes": "24/7"}]},
+    "Japan": {"national": [{"name": "Inochi No Denwa", "number": "0570-064-556", "notes": "24/7"}]},
+    "India": {"national": [{"name": "iCall", "number": "022-25521111", "notes": "24/7"}]},
+    "Brazil": {"national": [{"name": "CVV", "number": "188", "notes": "24/7"}]},
+    "Mexico": {"national": [{"name": "SAPTEL", "number": "55 5259-8121", "notes": "24/7"}]},
+    "South Africa": {"national": [{"name": "Lifeline South Africa", "number": "0861 322 322", "notes": "24/7"}]},
+    "New Zealand": {"national": [{"name": "Lifeline New Zealand", "number": "0800 543 354", "notes": "24/7"}]},
+    "Netherlands": {"national": [{"name": "113 Zelfmoordpreventie", "number": "0800-0113", "notes": "24/7"}]},
+    "Sweden": {"national": [{"name": "Mind", "number": "90101", "notes": "24/7"}]},
+    "Switzerland": {"national": [{"name": "Die Dargebotene Hand", "number": "143", "notes": "24/7"}]},
+    "South Korea": {"national": [{"name": "Suicide Prevention Hotline", "number": "1393", "notes": "24/7"}]},
+    "China": {"national": [{"name": "Beijing Suicide Research Center", "number": "800-810-1117", "notes": "24/7"}]},
+    "Argentina": {"national": [{"name": "Suicide Prevention Line", "number": "135", "notes": "24/7"}]},
+    "Portugal": {"national": [{"name": "SOS Voz Amiga", "number": "213 544 545", "notes": "24/7"}]},
+    "Poland": {"national": [{"name": "Telefon Zaufania", "number": "116 123", "notes": "24/7"}]},
+    "Norway": {"national": [{"name": "Kirkens SOS", "number": "22 40 00 40", "notes": "24/7"}]},
+    "Finland": {"national": [{"name": "Suomen Mielenterveysseura", "number": "010 195 202", "notes": "24/7"}]},
+    "Philippines": {"national": [{"name": "HOPELINE", "number": "0917-558-4673", "notes": "24/7"}]},
+    "Turkey": {"national": [{"name": "Alo 182", "number": "182", "notes": "24/7"}]},
+    "Russia": {"national": [{"name": "Russian Suicide Prevention", "number": "8-495-989-50-50", "notes": "24/7"}]},
+    "Greece": {"national": [{"name": "Klimaka", "number": "1110", "notes": "24/7"}]},
+    "Israel": {"national": [{"name": "ERAN", "number": "1201", "notes": "24/7"}]},
+    "Malaysia": {"national": [{"name": "Befrienders Malaysia", "number": "03-76272929", "notes": "24/7"}]},
+    "Singapore": {"national": [{"name": "Samaritans of Singapore", "number": "1800-221-4444", "notes": "24/7"}]},
+    "Thailand": {"national": [{"name": "Mental Health Hotline", "number": "1323", "notes": "24/7"}]},
+    "Ukraine": {"national": [{"name": "Lifeline Ukraine", "number": "7333", "notes": "24/7"}]},
+    "Egypt": {"national": [{"name": "Suicide Prevention Egypt", "number": "0800-888-8000", "notes": "24/7"}]}
+  }
+}
