@@ -5,9 +5,15 @@ from discord.ext import commands
 class HotlinesCog(commands.Cog):
     FLAGS = {
         "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧",
-        "Australia": "🇦🇺", "France": "🇫🇷", "Germany": "🇩🇪", "Japan": "🇯🇵",
-        "India": "🇮🇳", "Brazil": "🇧🇷", "Mexico": "🇲🇽", "South Africa": "🇿🇦",
-        "Spain": "🇪🇸", "Italy": "🇮🇹", "Netherlands": "🇳🇱"
+        "Australia": "🇦🇺", "France": "🇫🇷", "Germany": "🇩🇪", "Belgium": "🇧🇪",
+        "Spain": "🇪🇸", "Italy": "🇮🇹", "Japan": "🇯🇵", "India": "🇮🇳",
+        "Brazil": "🇧🇷", "Mexico": "🇲🇽", "South Africa": "🇿🇦", "New Zealand": "🇳🇿",
+        "Netherlands": "🇳🇱", "Sweden": "🇸🇪", "Switzerland": "🇨🇭", "South Korea": "🇰🇷",
+        "China": "🇨🇳", "Argentina": "🇦🇷", "Portugal": "🇵🇹", "Poland": "🇵🇱",
+        "Norway": "🇳🇴", "Finland": "🇫🇮", "Philippines": "🇵🇭", "Turkey": "🇹🇷",
+        "Russia": "🇷🇺", "Greece": "🇬🇷", "Israel": "🇮🇱", "Malaysia": "🇲🇾",
+        "Singapore": "🇸🇬", "Thailand": "🇹🇭", "Ukraine": "🇺🇦", "Egypt": "🇪🇬",
+        "Ireland": "🇮🇪", "Denmark": "🇩🇰"
     }
 
     def __init__(self, bot):
@@ -75,4 +81,4 @@ class HotlinesCog(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(HotlinesCog(bot))
-    print("✅ Hotlines cog loaded with final touches")
+    print("✅ Hotlines cog loaded with flags")
