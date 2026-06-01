@@ -3,18 +3,27 @@ from discord import app_commands
 from discord.ext import commands
 
 class HotlinesCog(commands.Cog):
-    FLAGS = {
-        "United States": "🇺🇸", "Canada": "🇨🇦", "United Kingdom": "🇬🇧",
-        "Australia": "🇦🇺", "France": "🇫🇷", "Germany": "🇩🇪", "Belgium": "🇧🇪",
-        "Spain": "🇪🇸", "Italy": "🇮🇹", "Japan": "🇯🇵", "India": "🇮🇳",
-        "Brazil": "🇧🇷", "Mexico": "🇲🇽", "South Africa": "🇿🇦", "New Zealand": "🇳🇿",
-        "Netherlands": "🇳🇱", "Sweden": "🇸🇪", "Switzerland": "🇨🇭", "South Korea": "🇰🇷",
-        "China": "🇨🇳", "Argentina": "🇦🇷", "Portugal": "🇵🇹", "Poland": "🇵🇱",
-        "Norway": "🇳🇴", "Finland": "🇫🇮", "Philippines": "🇵🇭", "Turkey": "🇹🇷",
-        "Russia": "🇷🇺", "Greece": "🇬🇷", "Israel": "🇮🇱", "Malaysia": "🇲🇾",
-        "Singapore": "🇸🇬", "Thailand": "🇹🇭", "Ukraine": "🇺🇦", "Egypt": "🇪🇬",
-        "Ireland": "🇮🇪", "Denmark": "🇩🇰"
+    # Country name to ISO code mapping for dynamic flag generation
+    COUNTRY_TO_ISO = {
+        "United States": "US", "Canada": "CA", "United Kingdom": "GB",
+        "Australia": "AU", "France": "FR", "Germany": "DE", "Belgium": "BE",
+        "Spain": "ES", "Italy": "IT", "Japan": "JP", "India": "IN",
+        "Brazil": "BR", "Mexico": "MX", "South Africa": "ZA", "New Zealand": "NZ",
+        "Netherlands": "NL", "Sweden": "SE", "Switzerland": "CH", "South Korea": "KR",
+        "China": "CN", "Argentina": "AR", "Portugal": "PT", "Poland": "PL",
+        "Norway": "NO", "Finland": "FI", "Philippines": "PH", "Turkey": "TR",
+        "Russia": "RU", "Greece": "GR", "Israel": "IL", "Malaysia": "MY",
+        "Singapore": "SG", "Thailand": "TH", "Ukraine": "UA", "Egypt": "EG",
+        "Ireland": "IE", "Denmark": "DK"
     }
+
+    def get_flag(self, country_name: str) -> str:
+        """Dynamically generate flag emoji from country name"""
+        iso = self.COUNTRY_TO_ISO.get(country_name)
+        if iso:
+            # Convert ISO code to flag emoji (regional indicator symbols)
+            return ''.join(chr(0x1F1E6 + ord(c) - ord('A')) for c in iso.upper())
+        return "🌍"  # Default globe
 
     def __init__(self, bot):
         self.bot = bot
@@ -57,7 +66,7 @@ class HotlinesCog(commands.Cog):
             await interaction.followup.send(f"❌ Could not find **{country}**.\nTry `/list_countries`", ephemeral=True)
             return
 
-        flag = self.FLAGS.get(country_key, "🌍")
+        flag = self.get_flag(country_key)
         embed = discord.Embed(title=f"{flag} {country_key} Hotlines", color=0x00ff88)
         
         for h in data[country_key].get("national", []):
@@ -76,9 +85,11 @@ class HotlinesCog(commands.Cog):
     async def list_countries(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
         countries = list(getattr(self.bot, 'hotlines_data', {}).get("countries", {}).keys())
-        msg = "**Available Countries:**\n• " + "\n• ".join(sorted(countries))
+        # Dynamic flags in list
+        country_list = [f"{self.get_flag(c)} {c}" for c in sorted(countries)]
+        msg = "**Available Countries:**\n• " + "\n• ".join(country_list)
         await interaction.followup.send(msg, ephemeral=True)
 
 async def setup(bot):
     await bot.add_cog(HotlinesCog(bot))
-    print("✅ Hotlines cog loaded with flags")
+    print("✅ Hotlines cog loaded with dynamic flags")
